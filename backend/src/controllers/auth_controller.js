@@ -24,6 +24,7 @@ export const register = async (req, res) => {
         id: new_user._id,
         name: new_user.name,
         email: new_user.email
+        // TODO: Add role field
       }
     });
     
@@ -58,6 +59,7 @@ export const login = async (req, res) => {
         id: user._id,
         name: user.name,
         email: user.email
+        // TODO: Add role field
       }
     });
     
