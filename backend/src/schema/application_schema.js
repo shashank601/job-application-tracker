@@ -1,7 +1,6 @@
 import { z } from "zod";
 
 export const create_application_schema = z.object({
-  title: z.string().trim().min(2, "Title too short"),
   company_name: z.string().trim().min(2, "Company name too short"),
   position: z.string().trim().min(2, "Position too short"),
   location: z.string().trim().min(2, "Location too short"),
