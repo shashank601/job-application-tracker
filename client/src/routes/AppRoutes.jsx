@@ -3,7 +3,7 @@ import RequireAuth from "../utils/RequireAuth.jsx";
 import RequireRole from "../utils/RequireRole.jsx";
 import GuestRoute from "../utils/GuestRoute.jsx";
 
-import AuthLayout from "../components/AuthLayout.jsx";
+import AuthLayout from "../layout/AuthLayout.jsx";
 import Register from "../pages/Register.jsx";
 import Login from "../pages/Login.jsx";
 import Dashboard from "../pages/Dashboard.jsx";

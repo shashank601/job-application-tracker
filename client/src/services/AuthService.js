@@ -3,7 +3,8 @@ import { clearToken } from "../utils/Token.js";
 
 export const Login = async ({email, password}) => {
     const credentials = {email, password};
-    const response = await api.post('/auth/login', credentials); // jwt token or error
+    console.log(credentials);
+    const response = await api.post('/auth/login', credentials); 
     return response.data;
 }
 
