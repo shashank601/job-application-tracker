@@ -1,8 +1,11 @@
 import axios from "axios";
+import dotenv from "dotenv";
 import { getToken } from "../utils/Token.js";
 
+dotenv.config();
+
 const api = axios.create({
-  baseURL: "http://localhost:3000/api/v1",
+  baseURL: process.env.BASE_URL,
 });
 
 
