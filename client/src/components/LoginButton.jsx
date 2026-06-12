@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { Login } from '../services/AuthService.js';
 import { useNavigate } from 'react-router-dom';
-import { setToken } from '../utils/auth.js';
+import { setToken } from '../utils/Token.js';
 import { useAuth } from '../context/AuthContext.jsx';
 
 export default function LoginButton({email, password}) {
