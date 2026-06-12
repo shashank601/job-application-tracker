@@ -1,6 +1,6 @@
 import express from "express";
 import { createApplication, getApplications, updateApplication, deleteApplication } from "../../controllers/application_controller.js";
-import { validate } from "../../middlewares/validate.js";
+import { validate } from "../../middlewares/validate_middleware.js";
 import { create_application_schema, update_application_schema, delete_application_schema } from "../../schema/application_schema.js";
 
 const router = express.Router();

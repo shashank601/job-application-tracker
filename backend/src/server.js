@@ -5,6 +5,11 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import error_handler from "./middlewares/error_handler.js";
+import swaggerUi from "swagger-ui-express";
+import { swaggerSpec } from "./docs/swagger.js";
+
+
+
 
 dotenv.config();
 
@@ -14,7 +19,8 @@ const requiredEnvVars = [
   "MONGO_URL",
   "PORT",
   "CLIENT_URL",
-  "LOG_LEVEL"
+  "LOG_LEVEL",
+  "BASE_URL"
 ];
 
 requiredEnvVars.forEach((key) => {
@@ -37,6 +43,8 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(routes);
 app.use(error_handler);
 
