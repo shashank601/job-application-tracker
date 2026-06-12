@@ -6,7 +6,7 @@ import { create_application_schema, update_application_schema, delete_applicatio
 const router = express.Router();
 
 router.post("/", validate(create_application_schema, "body"), createApplication);
-router.get("/", validate(null, "query"), getApplications);
+router.get("/", getApplications);
 router.patch("/:id", validate(update_application_schema, "body"), updateApplication);
 router.delete("/:id", validate(delete_application_schema, "params"), deleteApplication);
 
