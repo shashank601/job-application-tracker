@@ -41,15 +41,13 @@
  *               $ref: "#/components/schemas/ErrorResponse"
  */
 
-
-
 /**
  * @openapi
  * /admin/users/{id}:
- *   get:
+ *   delete:
  *     tags:
  *       - Admin
- *     summary: Get user by id
+ *     summary: Delete user
  *     description: Admin only endpoint
  *     security:
  *       - bearerAuth: []
@@ -61,13 +59,13 @@
  *           type: string
  *     responses:
  *       200:
- *         description: User fetched successfully
+ *         description: User deleted successfully
  *         content:
  *           application/json:
  *             schema:
- *               $ref: "#/components/schemas/UserResponse"
+ *               $ref: "#/components/schemas/SuccessMessage"
  *       400:
- *         description: Invalid user id
+ *         description: Invalid user id or admin cannot delete self
  *         content:
  *           application/json:
  *             schema:

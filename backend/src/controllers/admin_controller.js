@@ -1,5 +1,6 @@
 
 import User from "../models/user_model.js";
+import Application from "../models/application_model.js";
 import mongoose from "mongoose";
 
 
@@ -38,10 +39,12 @@ export const delete_user = async (req, res) => {
         }
         
         const user = await User.findByIdAndDelete(userId);
-        
+
         if (!user) {
             return res.status(404).json({ success: false, message: "User not found" });
         }
+        
+        await Application.deleteMany({ userId });
         
         res.json({ success: true, message: "User deleted successfully" });
     } catch (error) {
