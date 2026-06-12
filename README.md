@@ -72,6 +72,15 @@ A full-stack job application tracking system with authentication, role-based acc
 
 <img width="700" alt="Screenshot 2026-06-12 202126" src="https://github.com/user-attachments/assets/078bb6cc-9e46-4349-89ab-f1c31b76a238" />
 
+
+---
+### API Documentation (Swagger UI)
+
+<img width="700" alt="Screenshot 2026-06-12 205958" src="https://github.com/user-attachments/assets/4dfaa852-577b-4bda-8c9e-fcceb59747c1" />
+<br/>
+<br/>
+<img width="700" alt="Screenshot 2026-06-12 210020" src="https://github.com/user-attachments/assets/318e9fde-9308-41ff-8c04-ad53c2ab5d10" />
+
 ---
 ### Security & Scalability
 
