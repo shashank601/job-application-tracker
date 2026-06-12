@@ -44,19 +44,20 @@ export const getApplications = async (req, res) => {
             .limit(limit);
 
         const totalPages = Math.ceil(totalItems / limit);
-        
-        res.status(200).json({ 
-            success: true, 
-            data, 
-            total: totalItems, 
-            page, 
-            limit, 
-            totalPages, 
+
+        res.status(200).json({
+            success: true,
+            data,
+            total: totalItems,
+            page,
+            limit,
+            totalPages,
             hasNextPage: page < totalPages,
-            hasPrevPage: page > 1 
+            hasPrevPage: page > 1
         });
     } catch (error) {
-        res.status(500).json({ success: false, message: "Internal server error" });
+        console.error("Error in getApplications:", error);
+        res.status(500).json({ success: false, message: error.message || "Internal server error" });
     }
 };
 
