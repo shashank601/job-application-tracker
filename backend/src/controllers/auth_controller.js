@@ -8,7 +8,7 @@ export const register = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (user) {
-      return res.status(400).json({ message: "User already exists" });
+      return res.status(409).json({ message: "User already exists" });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -23,8 +23,8 @@ export const register = async (req, res) => {
       user: {
         id: new_user._id,
         name: new_user.name,
-        email: new_user.email
-        // TODO: Add role field
+        email: new_user.email,
+        role: new_user.role
       }
     });
     
@@ -58,8 +58,8 @@ export const login = async (req, res) => {
       user: {
         id: user._id,
         name: user.name,
-        email: user.email
-        // TODO: Add role field
+        email: user.email,
+        role: user.role
       }
     });
     
