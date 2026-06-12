@@ -1,11 +1,8 @@
 import axios from "axios";
-import dotenv from "dotenv";
 import { getToken } from "../utils/Token.js";
 
-dotenv.config();
-
 const api = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: import.meta.env.VITE_BASE_URL,
 });
 
 

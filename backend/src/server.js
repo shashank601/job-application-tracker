@@ -19,7 +19,6 @@ const requiredEnvVars = [
   "MONGO_URL",
   "PORT",
   "CLIENT_URL",
-  "LOG_LEVEL",
   "BASE_URL"
 ];
 
